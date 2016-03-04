@@ -10,8 +10,6 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositor
 RUN apk update && \
   apk add --update redis && rm -rf /var/cache/apk/*
 
-RUN echo never > /sys/kernel/mm/transparent_hugepage/enabled
-
 ARG DIR
 
 COPY ./redis.conf /redis.conf
