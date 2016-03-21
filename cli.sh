@@ -28,6 +28,10 @@ function run() {
     --volume $PWD/data:/home/redis/data \
     --publish $HOST_PORT:$CONTAINER_PORT \
     $CONTAINER_NAME
+
+  ip
+
+  echo "started docker container $CONTAINER_NAME"
 }
 
 function help() {
