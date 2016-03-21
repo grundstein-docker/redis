@@ -35,22 +35,9 @@ rm:
 stop:
 	@./cli.sh stop
 
+ip:
+	@./cli.sh ip
 
 # help output
 help:
-	@echo "\
-Usage \n\
-make TASK\n\
-
-TASKS:
-	dev     - build then tail logs
-	build   - docker build container
-	run     - docker run container
-	debug   - connect to docker container
-	logs    - tail docker container logs
-	rm      - remove docker container
-	stop    - stop docker container
-\n\
-	help      - this help text \n\
-"
-i
+	@./cli.sh help
