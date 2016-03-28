@@ -2,4 +2,4 @@ data
 logs
 ENV.sh
 IPS.sh
-IP.txt
+SERVER_IP
