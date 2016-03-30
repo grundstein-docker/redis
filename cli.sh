@@ -25,7 +25,7 @@ function run() {
   docker run \
     --detach \
     --name $CONTAINER_NAME \
-    --volume $PWD/data:/home/redis/data \
+    --volume $DATA_DIR/redis/data:/home/redis/data \
     --publish $HOST_PORT:$CONTAINER_PORT \
     $CONTAINER_NAME
 
