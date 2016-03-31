@@ -1,3 +1,5 @@
+CLI=./cli.sh
+
 .PHONY: \
 	all \
 	dev \
@@ -18,32 +20,32 @@ all: help
 dev: run logs
 
 build:
-	@./cli.sh build
+	@${CLI} $@
 
 run:
-	@./cli.sh run
+	@${CLI} $@
 
 debug:
-	@./cli.sh debug
+	@${CLI} $@
 
 logs:
-	@./cli.sh logs
+	@${CLI} $@
 
 rm:
-	@./cli.sh remove
+	@${CLI} $@
 
 stop:
-	@./cli.sh stop
+	@${CLI} $@
 
 ip:
-	@./cli.sh ip
+	@${CLI} $@
 
 update:
-	@./cli.sh update
+	@${CLI} $@
 
 status:
-	@./cli.sh status
+	@${CLI} $@
 
 # help output
 help:
-	@./cli.sh help
+	@${CLI} $@
