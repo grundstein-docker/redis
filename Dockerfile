@@ -21,10 +21,10 @@ VOLUME ${DIR}/data
 # Define working directory.
 WORKDIR ${DIR}/data
 
-# Define default command.
-CMD ["redis-server", "/redis.conf"]
-
 ARG PORT
 
 # Expose ports.
 EXPOSE ${PORT}
+
+# Define default command.
+CMD ["redis-server", "/redis.conf"]
