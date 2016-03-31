@@ -38,6 +38,12 @@ stop:
 ip:
 	@./cli.sh ip
 
+update:
+	@./cli.sh update
+
+status:
+	@./cli.sh status
+
 # help output
 help:
 	@./cli.sh help
