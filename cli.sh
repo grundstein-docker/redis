@@ -6,7 +6,7 @@ source ../../bin/tasks.sh
 echo "container: $CONTAINER_NAME"
 
 function build() {
-  echo "docker building $CONTAINER_NAME"
+  echo-start "build"
 
   docker build \
     --tag=$CONTAINER_NAME \
@@ -14,13 +14,13 @@ function build() {
     --build-arg="PORT=$CONTAINER_PORT" \
     . # dot!
 
-  echo "$CONTAINER_NAME build finished"
+  echo-finished "build"
 }
 
 function run() {
   remove
 
-  echo "starting docker container"
+  echo-start "run"
 
   docker run \
     --detach \
@@ -31,7 +31,7 @@ function run() {
 
   ip
 
-  echo "started docker container $CONTAINER_NAME"
+  echo-finished "run"
 }
 
 function help() {
