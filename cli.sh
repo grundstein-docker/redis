@@ -1,5 +1,7 @@
 #!/bin/bash
 
+IP=172.18.0.2
+
 source ./ENV.sh
 source ../../bin/tasks.sh
 
@@ -27,9 +29,12 @@ function run() {
     --name $CONTAINER_NAME \
     --volume $DATA_DIR/redis/data:/home/redis/data \
     --publish $HOST_PORT:$CONTAINER_PORT \
+    --env REDIS_PASSWORD=$PASS \
+    --net user-defined \
+    --ip $IP \
     $CONTAINER_NAME
 
-  ip
+  ip $IP
 
   echo-finished "run"
 }
@@ -59,4 +64,3 @@ then
 else
   help $@
 fi
-
