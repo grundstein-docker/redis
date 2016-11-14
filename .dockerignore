@@ -1,3 +1,4 @@
 *
 !data
 !redis.conf
+!entrypoint.sh
